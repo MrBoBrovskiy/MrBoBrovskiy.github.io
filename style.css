@@ -1,0 +1,286 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 400;
+    background: rgb(238, 174, 202);
+    background: linear-gradient(
+        70deg,
+        rgba(238, 174, 202, 1) 0%,
+        rgba(148, 187, 233, 1) 100%
+    );
+    }
+header.top {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+
+}
+nav ul{
+    display: flex;
+    align-items: center;
+
+}
+nav ul li{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 10px;
+    list-style: none;
+
+}
+nav ul li a{
+    color: inherit;
+    text-decoration: none;
+
+}
+nav{
+
+}
+
+.logo{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    }
+.content {
+    padding: 0 30px;
+    box-sizing: border-box;
+    text-align: justify;
+    font-size: 20px;
+
+
+}
+/* table */
+.bordered {
+    position: absolute;
+    right: 500px;
+    vertical-align: 15%;
+
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc;
+    -moz-box-shadow: 0 1px 1px #ccc;
+    box-shadow: 0 1px 1px #ccc;
+}
+
+.bordered tr:hover {
+    background: #fff;
+    -o-transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 30px;
+    text-align: center;
+}
+
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+/* Drag&Drop */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 100px 0;
+}
+
+.list__cell {
+    flex-basis: calc(25% - 40px);
+    min-height: 150px;
+    margin: 20px;
+    list-style: none;
+    box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.2);
+    overflow: hidden;
+    background-color:#f0f2f5;;
+}
+
+.list__caption {
+    width: calc(25% - 40px);
+    margin: 0 20px;
+    list-style: none;
+    font-weight: bold;
+    color: #0747a6;
+}
+
+.list__card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100%;
+    cursor: all-scroll;
+}
+
+.list__card-header {
+    text-transform: lowercase;
+    font-weight: bold;
+    padding: 12px 20px;
+    background-color: #0747a6;
+    color: white;
+}
+
+.list__card-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eff5ff;
+    flex-grow: 1;
+    padding: 12px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.hovered {
+    background-color: #d1d8e2;
+}
+
+.hide {
+    display: none;
+}
+
+/* Настройки кнопки-лодки*/
+#container {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    transform: translatex(0px);
+    transition: all 4.5s;
+}
+/* настоящая кнопка, которую мы нажимаем */
+button {
+    justify-self: center;
+    align-self: flex-end;
+}
+
+/* убираем внешнюю границу настоящей кнопки, когда она в фокусе */
+button:focus {
+    outline: none;
+}
+
+/* как бы кнопка, которая будет превращаться в корабль */
+/* за этой нарисованной поверх всего кнопкой и будет прятаться остальное */
+#buttoun {
+    width: 300px;
+    height: 100px;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    background-color: rgb(100, 100, 200);
+    z-index: 1;
+    transition: all 1s;
+    font-size: 19px;
+    color: white;
+
+}
+
+/* мачта */
+#mast {
+    width: 12px;
+    height: 160px;
+    transform-origin: bottom;
+    transform: translate(170px, 48px) rotatez(-90deg);
+    background-color: rgb(100, 100, 200);
+    transition: all 1s;
+}
+
+/* парус */
+#sail-1 {
+    width: 0;
+    height: 0;
+    border-bottom: 145px solid white;
+    border-right: 60px solid transparent;
+    transform-origin: bottom;
+    transform: translatex(16px) scaley(0.001);
+    transition: all 1s;
+}
+
+/* второй парус */
+#sail-2 {
+    width: 0;
+    height: 0;
+    border-bottom: 145px solid white;
+    border-left: 100px solid transparent;
+    transform-origin: bottom;
+    transform: translate(-104px, -145px) scaley(0.001);
+    transition: all 1s;
+}
