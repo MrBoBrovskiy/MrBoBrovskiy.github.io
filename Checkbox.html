@@ -1,0 +1,88 @@
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Личный блог</title>
+        <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+    <link rel="manifest" href="ico/site.webmanifest">
+    <link rel="mask-icon" href="ico/safari-pinned-tab.svg" color="#000202">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top"><a href="index.html" class="logo">Mr.Bobrovskiy</a>
+<nav>
+       <ul>
+        <li><a href="index.html">На главную</a> </li>
+        <li><a href='Pagetwo.html'>Пример таблицы</a> </li>
+        <li><a href="third%20page.html">Task Manager</a> </li>
+        <li><a href="page%20for.html">Копка-Корабль</a> </li>
+        <li><a href="Checkbox.html">CheckBox</a> </li>
+    </ul>
+</nav>
+</header>
+
+
+<!-- общий блок для всех чекбоксов -->
+<div class="check-group">
+ <h1>Что добавить в пиццу?</h1>
+  <!-- создаём подпись и указываем, к какому элементу она относится -->
+  <label for="myCheckbox01" class="checkbox">
+
+    <!-- размещаем обычный чекбокс и задаём ему нужный класс -->
+    <!-- также указываем id, чтобы подпись смогла найти этот инбокс -->
+    <input class="checkbox__input" type="checkbox" id="myCheckbox01">
+
+    <!-- готовим виртуальное пространство для рисования -->
+    <svg class="checkbox__icon" viewBox="0 0 22 22">
+      <!-- рисуем красивую рамку чекбокса -->
+      <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#006F94" rx="3" />
+      <!-- сразу делаем красивую галочку, но пока делаем её невидимой -->
+      <path class="tick" stroke="#6EA340" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" />
+    </svg>
+
+    <!-- подписываем наш чекбокс -->
+    <span class="checkbox__label">Оливки</span>
+  </label>
+
+  <label for="myCheckbox02" class="checkbox">
+    <input class="checkbox__input" type="checkbox" id="myCheckbox02">
+    <svg class="checkbox__icon" viewBox="0 0 22 22">
+      <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#006F94" rx="3" />
+      <path class="tick" stroke="#6EA340" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" />
+    </svg>
+    <span class="checkbox__label">Пепперони</span>
+  </label>
+
+   <label for="myCheckbox03" class="checkbox">
+    <input class="checkbox__input" type="checkbox" id="myCheckbox03">
+    <svg class="checkbox__icon" viewBox="0 0 22 22">
+      <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#006F94" rx="3" />
+      <path class="tick" stroke="#6EA340" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" />
+    </svg>
+    <span class="checkbox__label">Каперсы</span>
+  </label>
+
+   <label for="myCheckbox04" class="checkbox">
+    <input class="checkbox__input" type="checkbox" id="myCheckbox04">
+    <svg class="checkbox__icon" viewBox="0 0 22 22">
+      <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#006F94" rx="3" />
+      <path class="tick" stroke="#6EA340" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" />
+    </svg>
+    <span class="checkbox__label">Помидоры</span>
+  </label>
+
+  <!-- считаем и выводим результаты -->
+  <div class="check-group__result">Выбрано:</div>
+
+</div>
+
+
+</body>
+</html>
