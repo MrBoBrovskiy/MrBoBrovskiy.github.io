@@ -65,9 +65,11 @@ nav{
 
 }
 /* table */
+
 .bordered {
     position: absolute;
-    right: 500px;
+    right: 650px;
+    top: 250px;
     vertical-align: 5%;
 
     border: solid #ccc 1px;
